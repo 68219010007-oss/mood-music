@@ -1,128 +1,85 @@
 
-const songs = [
-    // เพลงรัก
-    { name: "โต๊ะริม", artist: "NONT TANONT", category: "love" },
-    { name: "ลาลาลอย", artist: "The TOYS", category: "love" },
-    { name: "รักแรกพบ", artist: "Tattoo Colour", category: "love" },
-    { name: "คู่ชีวิต", artist: "COCKTAIL", category: "love" },
-    { name: "แค่คุณ", artist: "Musketeers", category: "love" },
-    { name: "ดาวหางฮัลเลย์", artist: "fellow fellow", category: "love" },
-    { name: "เธอทั้งนั้น", artist: "Groove Riders", category: "love" },
-    { name: "คลั่งรัก", artist: "First Anuwat", category: "love" },
-    { name: "ยินดีที่ไม่รู้จัก", artist: "25hours", category: "love" },
-    { name: "ลืมไปแล้วว่าลืมยังไง", artist: "Jeff Satur", category: "love" },
+document.addEventListener("DOMContentLoaded", function () {
 
-    // เพลงไทบ้าน
-    { name: "กอดเสาเถียง", artist: "ปรีชา ปัดภัย", category: "isan" },
-    { name: "ไสว่าสิบ่ถิ่มกัน", artist: "ก้อง ห้วยไร่", category: "isan" },
-    { name: "ถิ่มอ้ายไว้ตรงนี้ล่ะ", artist: "ไผ่ พงศธร", category: "isan" },
-    { name: "อ้ายมีเหตุผล", artist: "เบิ้ล ปทุมราช", category: "isan" },
-    { name: "ห่อหมกฮวกไปฝากป้า", artist: "เต๊ะ ตระกูลตอ", category: "isan" },
-    { name: "บักจีเหลิน", artist: "จีเหลิน สายหมอบ", category: "isan" },
-    { name: "สิงึดติ", artist: "เต๊ะ ตระกูลตอ", category: "isan" },
-    { name: "เต่างอย", artist: "จินตหรา พูนลาภ", category: "isan" },
-    { name: "จื่อบ่", artist: "ก้านตอง ทุ่งเงิน", category: "isan" },
-    { name: "คำแพง", artist: "แซ็ค ชุมแพ", category: "isan" },
+    const songs = [
+        // เพลงรัก
+        { name: "โต๊ะริม", artist: "NONT TANONT", category: "love" },
+        { name: "ลาลาลอย", artist: "The TOYS", category: "love" },
+        { name: "รักแรกพบ", artist: "Tattoo Colour", category: "love" },
+        { name: "คู่ชีวิต", artist: "COCKTAIL", category: "love" },
+        { name: "แค่คุณ", artist: "Musketeers", category: "love" },
+        { name: "ดาวหางฮัลเลย์", artist: "fellow fellow", category: "love" },
+        { name: "เธอทั้งนั้น", artist: "Groove Riders", category: "love" },
+        { name: "คลั่งรัก", artist: "First Anuwat", category: "love" },
+        { name: "ยินดีที่ไม่รู้จัก", artist: "25hours", category: "love" },
+        { name: "ลืมไปแล้วว่าลืมยังไง", artist: "Jeff Satur", category: "love" },
 
-    // เพลงเศร้า
-    { name: "วิงวอน", artist: "BOWKYLION", category: "sad" },
-    { name: "ได้แต่นึกถึง", artist: "Only Monday", category: "sad" },
-    { name: "ลบไม่ได้ช่วยให้ลืม", artist: "Ink Waruntorn", category: "sad" },
-    { name: "ถ้าเราเจอกันอีก", artist: "Tilly Birds", category: "sad" },
-    { name: "ฝนตกไหม", artist: "Three Man Down", category: "sad" },
-    { name: "ทิ้งไว้กลางทาง", artist: "POTATO", category: "sad" },
-    { name: "เจ็บจนพอ", artist: "WANYAi", category: "sad" },
-    { name: "ถอย", artist: "GLISS", category: "sad" },
-    { name: "ซ่อนกลิ่น", artist: "PALMY", category: "sad" },
-    { name: "ภาพจำ", artist: "Pop Pongkool", category: "sad" },
+        // เพลงไทบ้าน
+        { name: "กอดเสาเถียง", artist: "ปรีชา ปัดภัย", category: "isan" },
+        { name: "ไสว่าสิบ่ถิ่มกัน", artist: "ก้อง ห้วยไร่", category: "isan" },
+        { name: "ถิ่มอ้ายไว้ตรงนี้ล่ะ", artist: "ไผ่ พงศธร", category: "isan" },
+        { name: "อ้ายมีเหตุผล", artist: "เบิ้ล ปทุมราช", category: "isan" },
+        { name: "ห่อหมกฮวกไปฝากป้า", artist: "เต๊ะ ตระกูลตอ", category: "isan" },
+        { name: "บักจีเหลิน", artist: "จีเหลิน สายหมอบ", category: "isan" },
+        { name: "สิงึดติ", artist: "เต๊ะ ตระกูลตอ", category: "isan" },
+        { name: "เต่างอย", artist: "จินตหรา พูนลาภ", category: "isan" },
+        { name: "จื่อบ่", artist: "ก้านตอง ทุ่งเงิน", category: "isan" },
+        { name: "คำแพง", artist: "แซ็ค ชุมแพ", category: "isan" },
 
-    // เพลงอังกฤษ
-    { name: "Until I Found You", artist: "Stephen Sanchez", category: "english" },
-    { name: "Someone You Loved", artist: "Lewis Capaldi", category: "english" },
-    { name: "Perfect", artist: "Ed Sheeran", category: "english" },
-    { name: "Photograph", artist: "Ed Sheeran", category: "english" },
-    { name: "All of Me", artist: "John Legend", category: "english" },
-    { name: "Say You Won't Let Go", artist: "James Arthur", category: "english" },
-    { name: "A Thousand Years", artist: "Christina Perri", category: "english" },
-    { name: "Let Her Go", artist: "Passenger", category: "english" },
-    { name: "Night Changes", artist: "One Direction", category: "english" },
-    { name: "Dandelions", artist: "Ruth B.", category: "english" },
+        // เพลงเศร้า
+        { name: "วิงวอน", artist: "BOWKYLION", category: "sad" },
+        { name: "ได้แต่นึกถึง", artist: "Only Monday", category: "sad" },
+        { name: "ลบไม่ได้ช่วยให้ลืม", artist: "Ink Waruntorn", category: "sad" },
+        { name: "ถ้าเราเจอกันอีก", artist: "Tilly Birds", category: "sad" },
+        { name: "ฝนตกไหม", artist: "Three Man Down", category: "sad" },
+        { name: "ทิ้งไว้กลางทาง", artist: "POTATO", category: "sad" },
+        { name: "เจ็บจนพอ", artist: "WANYAi", category: "sad" },
+        { name: "ถอย", artist: "GLISS", category: "sad" },
+        { name: "ซ่อนกลิ่น", artist: "PALMY", category: "sad" },
+        { name: "ภาพจำ", artist: "Pop Pongkool", category: "sad" },
 
-    // เพลงลูกทุ่ง
-    { name: "ว่าว", artist: "มีนตรา อินทิรา", category: "lukthung" },
-    { name: "ผู้สาวขาเลาะ", artist: "ลำไย ไหทองคำ", category: "lukthung" },
-    { name: "อัปสราหลงฟ้า", artist: "หนุ่ม มีซอ", category: "lukthung" },
-    { name: "สวยขยี้ใจ", artist: "บุ๊ค ศุภกฤต", category: "lukthung" },
-    { name: "ฝนรินในเมืองหลวง", artist: "ไผ่ พงศธร", category: "lukthung" },
-    { name: "ด้วยแรงแห่งรัก", artist: "ไมค์ ภิรมย์พร", category: "lukthung" },
-    { name: "บุญผลา", artist: "ไมค์ ภิรมย์พร", category: "lukthung" },
-    { name: "ไหง่ง่อง", artist: "ตั๊กแตน ชลดา", category: "lukthung" },
-    { name: "สัญญาน้ำตาแม่", artist: "มนต์แคน แก่นคูน", category: "lukthung" },
-    { name: "แม่ฮ้างมหาเสน่ห์", artist: "T Rex Tube", category: "lukthung" },
+        // เพลงอังกฤษ
+        { name: "Until I Found You", artist: "Stephen Sanchez", category: "english" },
+        { name: "Someone You Loved", artist: "Lewis Capaldi", category: "english" },
+        { name: "Perfect", artist: "Ed Sheeran", category: "english" },
+        { name: "Photograph", artist: "Ed Sheeran", category: "english" },
+        { name: "All of Me", artist: "John Legend", category: "english" },
+        { name: "Say You Won't Let Go", artist: "James Arthur", category: "english" },
+        { name: "A Thousand Years", artist: "Christina Perri", category: "english" },
+        { name: "Let Her Go", artist: "Passenger", category: "english" },
+        { name: "Night Changes", artist: "One Direction", category: "english" },
+        { name: "Dandelions", artist: "Ruth B.", category: "english" },
 
-    // The Voice Thailand
-    { name: "ฟ้า", artist: "นนท์ ธนนท์", category: "voice" },
-    { name: "คิดมาก", artist: "The Voice Thailand", category: "voice" },
-    { name: "นิยามรัก", artist: "The Voice Thailand", category: "voice" },
-    { name: "นางฟ้า", artist: "The Voice Thailand", category: "voice" },
-    { name: "Lately", artist: "The Voice Thailand", category: "voice" },
-    { name: "นิโคติน", artist: "The Voice Thailand", category: "voice" },
-    { name: "มีชีวิตเพื่อคนอื่น", artist: "The Voice Thailand", category: "voice" },
-    { name: "ไม่มีใคร", artist: "The Voice Thailand", category: "voice" },
-    { name: "วาดไว้", artist: "The Voice Thailand", category: "voice" },
-    { name: "Don't You Worry 'Bout a Thing", artist: "The Voice Thailand", category: "voice" }
-];
+        // เพลงลูกทุ่ง
+        { name: "ว่าว", artist: "มีนตรา อินทิรา", category: "lukthung" },
+        { name: "ผู้สาวขาเลาะ", artist: "ลำไย ไหทองคำ", category: "lukthung" },
+        { name: "อัปสราหลงฟ้า", artist: "หนุ่ม มีซอ", category: "lukthung" },
+        { name: "สวยขยี้ใจ", artist: "บุ๊ค ศุภกฤต", category: "lukthung" },
+        { name: "ฝนรินในเมืองหลวง", artist: "ไผ่ พงศธร", category: "lukthung" },
+        { name: "ด้วยแรงแห่งรัก", artist: "ไมค์ ภิรมย์พร", category: "lukthung" },
+        { name: "บุญผลา", artist: "ไมค์ ภิรมย์พร", category: "lukthung" },
+        { name: "ไหง่ง่อง", artist: "ตั๊กแตน ชลดา", category: "lukthung" },
+        { name: "สัญญาน้ำตาแม่", artist: "มนต์แคน แก่นคูน", category: "lukthung" },
+        { name: "แม่ฮ้างมหาเสน่ห์", artist: "T Rex Tube", category: "lukthung" },
 
-const musicGrid = document.getElementById("musicGrid");
-const filterButtons = document.querySelectorAll(".filter-btn");
-const noResults = document.getElementById("noResults");
+        // The Voice Thailand
+        { name: "ฟ้า", artist: "นนท์ ธนนท์", category: "voice" },
+        { name: "คิดมาก", artist: "The Voice Thailand", category: "voice" },
+        { name: "นิยามรัก", artist: "The Voice Thailand", category: "voice" },
+        { name: "นางฟ้า", artist: "The Voice Thailand", category: "voice" },
+        { name: "Lately", artist: "The Voice Thailand", category: "voice" },
+        { name: "นิโคติน", artist: "The Voice Thailand", category: "voice" },
+        { name: "มีชีวิตเพื่อคนอื่น", artist: "The Voice Thailand", category: "voice" },
+        { name: "ไม่มีใคร", artist: "The Voice Thailand", category: "voice" },
+        { name: "วาดไว้", artist: "The Voice Thailand", category: "voice" },
+        { name: "Don't You Worry 'Bout a Thing", artist: "The Voice Thailand", category: "voice" }
+    ];
 
-// แสดงรายการเพลง
-function displaySongs(category = "all") {
-    musicGrid.innerHTML = "";
+    const grid = document.getElementById("musicGrid");
+    const buttons = document.querySelectorAll(".filter-btn");
+    const noResults = document.getElementById("noResults");
 
-    const filteredSongs = category === "all"
-        ? songs
-        : songs.filter(song => song.category === category);
-
-    filteredSongs.forEach((song, index) => {
-        const spotifyUrl = "https://open.spotify.com/search/" +
-            encodeURIComponent(song.name + " " + song.artist);
-
-        const card = document.createElement("article");
-        card.className = "music-card";
-
-        const number = String(index + 1).padStart(2, "0");
-
-        card.innerHTML = `
-            <div class="music-cover">
-                <span class="music-number">${number}</span>
-                <span class="music-symbol">♫</span>
-            </div>
-
-            <div class="music-info">
-                <p class="music-category">${getCategoryName(song.category)}</p>
-                <h3>${song.name}</h3>
-                <p class="music-artist">${song.artist}</p>
-
-                <a class="spotify-btn"
-                   href="${spotifyUrl}"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <span>▶</span> ฟังบน Spotify
-                </a>
-            </div>
-        `;
-
-        musicGrid.appendChild(card);
-    });
-
-    noResults.hidden = filteredSongs.length !== 0;
-}
-
-// แปลงชื่อหมวดหมู่
-function getCategoryName(category) {
-    const categories = {
+    const categoryNames = {
         love: "เพลงรัก",
         isan: "เพลงไทบ้าน",
         sad: "เพลงเศร้า",
@@ -131,18 +88,64 @@ function getCategoryName(category) {
         voice: "The Voice Thailand"
     };
 
-    return categories[category] || "เพลงทั้งหมด";
-}
+    // ตรวจสอบพื้นที่แสดงเพลง
+    if (!grid) {
+        alert("ไม่พบ musicGrid กรุณาตรวจสอบ index.html");
+        return;
+    }
 
-// ระบบกรองเพลง
-filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        filterButtons.forEach(btn => btn.classList.remove("active"));
-        button.classList.add("active");
+    function displaySongs(category = "all") {
+        grid.innerHTML = "";
 
-        displaySongs(button.dataset.filter);
+        const filteredSongs = songs.filter(song =>
+            category === "all" || song.category === category
+        );
+
+        filteredSongs.forEach((song, index) => {
+            const card = document.createElement("article");
+            card.className = "music-card";
+
+            const spotifyUrl =
+                "https://open.spotify.com/search/" +
+                encodeURIComponent(song.name + " " + song.artist);
+
+            card.innerHTML = `
+                <div class="music-cover">
+                    <span class="music-number">${String(index + 1).padStart(2, "0")}</span>
+                    <span class="music-symbol">♫</span>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">${categoryNames[song.category]}</p>
+                    <h3>${song.name}</h3>
+                    <p class="music-artist">${song.artist}</p>
+                    <a class="spotify-btn"
+                       href="${spotifyUrl}"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                       ▶ ฟังบน Spotify
+                    </a>
+                </div>
+            `;
+
+            grid.appendChild(card);
+        });
+
+        if (noResults) {
+            noResults.hidden = filteredSongs.length > 0;
+        }
+    }
+
+    // ปุ่มกรองเพลง
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            buttons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
+            displaySongs(this.dataset.filter);
+        });
     });
-});
 
-// แสดงเพลงทั้งหมดเมื่อเปิดเว็บไซต์
-displaySongs();
+    displaySongs();
+
+    console.log("MOOD MUSIC: โหลดเพลงสำเร็จ " + songs.length + " เพลง");
+});
