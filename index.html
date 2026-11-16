@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090909">
     <title>MOOD MUSIC | Your Music Your Mood</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,6 +12,7 @@
 
 <header class="header" id="home">
     <a href="#home" class="logo">MOOD<span>MUSIC</span></a>
+
     <nav>
         <a href="#home">หน้าแรก</a>
         <a href="#music">เพลงทั้งหมด</a>
@@ -23,57 +25,68 @@
     <div class="hero-content">
         <p class="eyebrow">YOUR MUSIC YOUR MOOD</p>
         <h1>เพลงที่ใช่<br><span>ในอารมณ์ของคุณ</span></h1>
-        <p>เลือกเพลงที่ตรงกับความรู้สึก แล้วไปฟังเพลงโปรดบน Spotify</p>
+        <p>เลือกเพลงที่ตรงกับความรู้สึก แล้วเปิดฟังได้ภายในเว็บไซต์</p>
         <a href="#music" class="main-btn">ค้นหาเพลง</a>
     </div>
 </section>
 
 <main>
-<section class="music-section" id="music">
-    <div class="section-heading">
-        <p class="eyebrow">EXPLORE MUSIC</p>
-        <h2>ค้นหาเพลงของคุณ</h2>
-        <p>เลือกหมวดเพลงที่ตรงกับอารมณ์ของคุณ</p>
-    </div>
+    <section class="music-section" id="music">
 
-    <div class="filter-buttons">
-        <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
-        <button class="filter-btn" data-filter="love">เพลงรัก</button>
-        <button class="filter-btn" data-filter="isan">เพลงไทบ้าน</button>
-        <button class="filter-btn" data-filter="sad">เพลงเศร้า</button>
-        <button class="filter-btn" data-filter="english">เพลงอังกฤษ</button>
-        <button class="filter-btn" data-filter="lukthung">เพลงลูกทุ่ง</button>
-        <button class="filter-btn" data-filter="voice">The Voice</button>
-    </div>
+        <div class="section-heading">
+            <p class="eyebrow">EXPLORE MUSIC</p>
+            <h2>ค้นหาเพลงของคุณ</h2>
+            <p>เลือกหมวดเพลงที่ตรงกับอารมณ์ของคุณ</p>
+        </div>
 
-    <div class="music-grid" id="musicGrid"></div>
-    <p id="noResults" hidden>ไม่พบเพลงในหมวดนี้</p>
-</section>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+            <button class="filter-btn" data-filter="love">เพลงรัก</button>
+            <button class="filter-btn" data-filter="isan">เพลงไทบ้าน</button>
+            <button class="filter-btn" data-filter="sad">เพลงเศร้า</button>
+            <button class="filter-btn" data-filter="english">เพลงอังกฤษ</button>
+            <button class="filter-btn" data-filter="lukthung">เพลงลูกทุ่ง</button>
+            <button class="filter-btn" data-filter="voice">The Voice Thailand</button>
+        </div>
 
-<section class="artists-section" id="artists">
-    <div class="section-heading">
-        <p class="eyebrow">OUR FAVORITE ARTISTS</p>
-        <h2>ศิลปินที่ชื่นชอบ</h2>
-    </div>
-    <div class="artist-grid">
-        <div class="artist-card">JEFF SATUR</div>
-        <div class="artist-card">NONT TANONT</div>
-        <div class="artist-card">BOWKYLION</div>
-        <div class="artist-card">INK WARUNTORN</div>
-        <div class="artist-card">THE TOYS</div>
-        <div class="artist-card">TAITOSMITH</div>
-        <div class="artist-card">GUNCHARLIE</div>
-        <div class="artist-card">PURPEECH</div>
-        <div class="artist-card">LITTLE JOHN</div>
-        <div class="artist-card">ONLY MONDAY</div>
-    </div>
-</section>
+        <p class="song-count" id="songCount"></p>
 
-<section class="about-section" id="about">
-    <p class="eyebrow">ABOUT MOOD MUSIC</p>
-    <h2>Music is a part of life.</h2>
-    <p>เว็บไซต์รวบรวมเพลงหลากหลายแนว ให้คุณเลือกฟังตามอารมณ์และความชอบผ่าน Spotify</p>
-</section>
+        <div class="music-grid" id="musicGrid"></div>
+
+        <p class="no-results" id="noResults" hidden>
+            ไม่พบเพลงในหมวดนี้
+        </p>
+    </section>
+
+    <section class="artists-section" id="artists">
+        <div class="section-heading">
+            <p class="eyebrow">OUR FAVORITE ARTISTS</p>
+            <h2>ศิลปินที่ชื่นชอบ</h2>
+        </div>
+
+        <div class="artist-grid">
+            <div class="artist-card">JEFF SATUR</div>
+            <div class="artist-card">NONT TANONT</div>
+            <div class="artist-card">BOWKYLION</div>
+            <div class="artist-card">INK WARUNTORN</div>
+            <div class="artist-card">THE TOYS</div>
+            <div class="artist-card">TAITOSMITH</div>
+            <div class="artist-card">GUNCHARLIE</div>
+            <div class="artist-card">PURPEECH</div>
+            <div class="artist-card">LITTLE JOHN</div>
+            <div class="artist-card">ONLY MONDAY</div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <p class="eyebrow">ABOUT MOOD MUSIC</p>
+        <h2>Music is a part of life.</h2>
+        <p>
+            เว็บไซต์รวบรวมเพลงหลากหลายแนว
+            ให้คุณเลือกเพลงตามอารมณ์และความชอบ
+            พร้อมเปิดฟังผ่าน Spotify
+        </p>
+    </section>
 </main>
 
 <footer>
