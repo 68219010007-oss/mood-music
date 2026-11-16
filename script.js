@@ -75,9 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Don't You Worry 'Bout a Thing", artist: "The Voice Thailand", category: "voice" }
     ];
 
-    const grid = document.getElementById("musicGrid");
-    const buttons = document.querySelectorAll(".filter-btn");
+    const musicGrid = document.getElementById("musicGrid");
+    const filterButtons = document.querySelectorAll(".filter-btn");
     const noResults = document.getElementById("noResults");
+    const songCount = document.getElementById("songCount");
 
     const categoryNames = {
         love: "เพลงรัก",
@@ -88,30 +89,28 @@ document.addEventListener("DOMContentLoaded", function () {
         voice: "The Voice Thailand"
     };
 
-    // ตรวจสอบพื้นที่แสดงเพลง
-    if (!grid) {
-        alert("ไม่พบ musicGrid กรุณาตรวจสอบ index.html");
+    if (!musicGrid) {
+        console.error("ไม่พบ musicGrid ใน index.html");
         return;
     }
 
     function displaySongs(category = "all") {
-        grid.innerHTML = "";
+        musicGrid.innerHTML = "";
 
-        const filteredSongs = songs.filter(song =>
-            category === "all" || song.category === category
-        );
+        const filteredSongs = category === "all"
+            ? songs
+            : songs.filter(song => song.category === category);
 
         filteredSongs.forEach((song, index) => {
             const card = document.createElement("article");
             card.className = "music-card";
 
-            const spotifyUrl =
-                "https://open.spotify.com/search/" +
-                encodeURIComponent(song.name + " " + song.artist);
+            const number = String(index + 1).padStart(2, "0");
 
+            // แสดงการ์ดเพลง
             card.innerHTML = `
                 <div class="music-cover">
-                    <span class="music-number">${String(index + 1).padStart(2, "0")}</span>
+                    <span class="music-number">${number}</span>
                     <span class="music-symbol">♫</span>
                 </div>
 
@@ -119,33 +118,65 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="music-category">${categoryNames[song.category]}</p>
                     <h3>${song.name}</h3>
                     <p class="music-artist">${song.artist}</p>
-                    <a class="spotify-btn"
-                       href="${spotifyUrl}"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                       ▶ ฟังบน Spotify
-                    </a>
+
+                    <button class="spotify-btn play-btn" type="button">
+                        ▶ เปิดเครื่องเล่น Spotify
+                    </button>
+
+                    <div class="spotify-player" hidden>
+                        <p class="player-note">
+                            ค้นหาเพลงนี้บน Spotify
+                        </p>
+                        <iframe
+                            title="Spotify ${song.name}"
+                            src="https://open.spotify.com/embed/search/${encodeURIComponent(song.name + " " + song.artist)}"
+                            width="100%"
+                            height="152"
+                            frameborder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
             `;
 
-            grid.appendChild(card);
+            // ปุ่มเปิดและปิดเครื่องเล่น
+            const playButton = card.querySelector(".play-btn");
+            const player = card.querySelector(".spotify-player");
+
+            playButton.addEventListener("click", function () {
+                player.hidden = !player.hidden;
+
+                playButton.textContent = player.hidden
+                    ? "▶ เปิดเครื่องเล่น Spotify"
+                    : "ปิดเครื่องเล่น";
+            });
+
+            musicGrid.appendChild(card);
         });
 
+        if (songCount) {
+            songCount.textContent =
+                `แสดงเพลง ${filteredSongs.length} จาก ${songs.length} เพลง`;
+        }
+
         if (noResults) {
-            noResults.hidden = filteredSongs.length > 0;
+            noResults.hidden = filteredSongs.length !== 0;
         }
     }
 
-    // ปุ่มกรองเพลง
-    buttons.forEach(button => {
+    // ระบบกรองหมวดเพลง
+    filterButtons.forEach(button => {
         button.addEventListener("click", function () {
-            buttons.forEach(btn => btn.classList.remove("active"));
+            filterButtons.forEach(btn => btn.classList.remove("active"));
             this.classList.add("active");
+
             displaySongs(this.dataset.filter);
         });
     });
 
+    // เริ่มต้นแสดงเพลงทั้งหมด
     displaySongs();
 
-    console.log("MOOD MUSIC: โหลดเพลงสำเร็จ " + songs.length + " เพลง");
+    console.log("MOOD MUSIC พร้อมใช้งาน จำนวน " + songs.length + " เพลง");
 });
