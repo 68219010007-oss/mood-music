@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MOOD MUSIC เว็บไซต์รวมเพลงหลากหลายแนว">
+    <title>MOOD MUSIC | เพลงที่ใช่ ในวันที่เป็นคุณ</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header" id="home">
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                MOOD<span>MUSIC</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#home">หน้าแรก</a></li>
+                <li><a href="#music">หมวดหมู่เพลง</a></li>
+                <li><a href="#artists">ศิลปิน</a></li>
+                <li><a href="#about">เกี่ยวกับเรา</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-label">WELCOME TO MOOD MUSIC</p>
+
+            <h1>
+                MUSIC FOR<br>
+                <span>EVERY MOOD.</span>
+            </h1>
+
+            <p class="hero-description">
+                รวมเพลงหลากหลายแนว เพลงรัก เพลงเศร้า เพลงไทบ้าน
+                และอีกมากมาย เลือกฟังเพลงที่ตรงกับความรู้สึกของคุณ
+            </p>
+
+            <a href="#music" class="hero-button">
+                EXPLORE MUSIC
+            </a>
+        </div>
+    </section>
+
+
+    <!-- MUSIC CATEGORY -->
+    <section class="music-section" id="music">
+
+        <div class="section-heading">
+            <p class="section-label">DISCOVER YOUR SOUND</p>
+            <h2>หมวดหมู่เพลง</h2>
+            <p>เลือกแนวเพลงที่คุณต้องการฟัง</p>
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+        <div class="filter-buttons">
+
+            <button class="filter-btn active" data-filter="all">
+                ทั้งหมด
+            </button>
+
+            <button class="filter-btn" data-filter="love">
+                เพลงรัก
+            </button>
+
+            <button class="filter-btn" data-filter="isan">
+                เพลงไทบ้าน
+            </button>
+
+            <button class="filter-btn" data-filter="sad">
+                เพลงเศร้า
+            </button>
+
+            <button class="filter-btn" data-filter="english">
+                เพลงอังกฤษ
+            </button>
+
+            <button class="filter-btn" data-filter="lukthung">
+                เพลงลูกทุ่ง
+            </button>
+
+            <button class="filter-btn" data-filter="voice">
+                The Voice Thailand
+            </button>
+
+        </div>
+
+
+        <!-- MUSIC GALLERY -->
+        <div class="music-grid" id="musicGrid">
+
+            <!-- LOVE -->
+            <article class="music-card" data-category="love">
+                <div class="music-cover cover-1">
+                    <span>LOVE SONG</span>
+                    <div class="cover-symbol">♥</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">เพลงรัก</p>
+                    <h3>โต๊ะริม</h3>
+                    <p class="artist-name">NONT TANONT</p>
+                </div>
+            </article>
+
+
+            <article class="music-card" data-category="love">
+                <div class="music-cover cover-2">
+                    <span>LOVE SONG</span>
+                    <div class="cover-symbol">♥</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">เพลงรัก</p>
+                    <h3>ลืมไปแล้วว่าลืมยังไง</h3>
+                    <p class="artist-name">Jeff Satur</p>
+                </div>
+            </article>
+
+
+            <!-- ISAN -->
+            <article class="music-card" data-category="isan">
+                <div class="music-cover cover-3">
+                    <span>ISAN MUSIC</span>
+                    <div class="cover-symbol">♫</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">เพลงไทบ้าน</p>
+                    <h3>กอดเสาเถียง</h3>
+                    <p class="artist-name">ปรีชา ปัดภัย</p>
+                </div>
+            </article>
+
+
+            <article class="music-card" data-category="isan">
+                <div class="music-cover cover-4">
+                    <span>ISAN MUSIC</span>
+                    <div class="cover-symbol">♫</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">เพลงไทบ้าน</p>
+                    <h3>ไสว่าสิบ่ถิ่มกัน</h3>
+                    <p class="artist-name">ก้อง ห้วยไร่</p>
+                </div>
+            </article>
+
+
+            <!-- SAD -->
+            <article class="music-card" data-category="sad">
+                <div class="music-cover cover-5">
+                    <span>SAD SONG</span>
+                    <div class="cover-symbol">☾</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">เพลงเศร้า</p>
+                    <h3>วิงวอน</h3>
+                    <p class="artist-name">BOWKYLION</p>
+                </div>
+            </article>
+
+
+            <article class="music-card" data-category="sad">
+                <div class="music-cover cover-6">
+                    <span>SAD SONG</span>
+                    <div class="cover-symbol">☾</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">เพลงเศร้า</p>
+                    <h3>ได้แต่นึกถึง</h3>
+                    <p class="artist-name">Only Monday</p>
+                </div>
+            </article>
+
+
+            <!-- ENGLISH -->
+            <article class="music-card" data-category="english">
+                <div class="music-cover cover-7">
+                    <span>ENGLISH SONG</span>
+                    <div class="cover-symbol">✦</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">เพลงอังกฤษ</p>
+                    <h3>Until I Found You</h3>
+                    <p class="artist-name">Stephen Sanchez</p>
+                </div>
+            </article>
+
+
+            <article class="music-card" data-category="english">
+                <div class="music-cover cover-8">
+                    <span>ENGLISH SONG</span>
+                    <div class="cover-symbol">✦</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">เพลงอังกฤษ</p>
+                    <h3>Someone You Loved</h3>
+                    <p class="artist-name">Lewis Capaldi</p>
+                </div>
+            </article>
+
+
+            <!-- LUKTHUNG -->
+            <article class="music-card" data-category="lukthung">
+                <div class="music-cover cover-9">
+                    <span>THAI COUNTRY</span>
+                    <div class="cover-symbol">♫</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">เพลงลูกทุ่ง</p>
+                    <h3>คำแพง</h3>
+                    <p class="artist-name">แซ็ค ชุมแพ</p>
+                </div>
+            </article>
+
+
+            <article class="music-card" data-category="lukthung">
+                <div class="music-cover cover-10">
+                    <span>THAI COUNTRY</span>
+                    <div class="cover-symbol">♫</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">เพลงลูกทุ่ง</p>
+                    <h3>ผู้สาวขาเลาะ</h3>
+                    <p class="artist-name">ลำไย ไหทองคำ</p>
+                </div>
+            </article>
+
+
+            <!-- THE VOICE -->
+            <article class="music-card" data-category="voice">
+                <div class="music-cover cover-11">
+                    <span>THE VOICE</span>
+                    <div class="cover-symbol">🎤</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">The Voice Thailand</p>
+                    <h3>รอบ Blind Auditions</h3>
+                    <p class="artist-name">The Voice Thailand</p>
+                </div>
+            </article>
+
+
+            <article class="music-card" data-category="voice">
+                <div class="music-cover cover-12">
+                    <span>THE VOICE</span>
+                    <div class="cover-symbol">🎤</div>
+                </div>
+
+                <div class="music-info">
+                    <p class="music-category">The Voice Thailand</p>
+                    <h3>รอบ Battle</h3>
+                    <p class="artist-name">The Voice Thailand</p>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="no-results" id="noResults" hidden>
+            ไม่พบเพลงในหมวดหมู่นี้
+        </p>
+
+    </section>
+
+
+    <!-- ARTISTS SECTION -->
+    <section class="artists-section" id="artists">
+
+        <div class="section-heading">
+            <p class="section-label">MY FAVORITE ARTISTS</p>
+            <h2>ศิลปินที่ชื่นชอบ</h2>
+            <p>รวมศิลปินและวงดนตรีที่น่าสนใจ</p>
+        </div>
+
+
+        <div class="artist-grid">
+
+            <div class="artist-card">
+                <div class="artist-icon">J</div>
+                <h3>Jeff Satur</h3>
+                <p>Pop / R&B</p>
+            </div>
+
+            <div class="artist-card">
+                <div class="artist-icon">N</div>
+                <h3>NONT TANONT</h3>
+                <p>Pop</p>
+            </div>
+
+            <div class="artist-card">
+                <div class="artist-icon">B</div>
+                <h3>Bowkylion</h3>
+                <p>Pop / Indie</p>
+            </div>
+
+            <div class="artist-card">
+                <div class="artist-icon">I</div>
+                <h3>Ink Waruntorn</h3>
+                <p>Synth Pop</p>
+            </div>
+
+            <div class="artist-card">
+                <div class="artist-icon">T</div>
+                <h3>The TOYS</h3>
+                <p>Pop / R&B</p>
+            </div>
+
+            <div class="artist-card">
+                <div class="artist-icon">T</div>
+                <h3>TaitosmitH</h3>
+                <p>Rock</p>
+            </div>
+
+            <div class="artist-card">
+                <div class="artist-icon">G</div>
+                <h3>Guncharlie</h3>
+                <p>Pop</p>
+            </div>
+
+            <div class="artist-card">
+                <div class="artist-icon">P</div>
+                <h3>PURPEECH</h3>
+                <p>Indie Pop</p>
+            </div>
+
+            <div class="artist-card">
+                <div class="artist-icon">L</div>
+                <h3>Little John</h3>
+                <p>Rock</p>
+            </div>
+
+            <div class="artist-card">
+                <div class="artist-icon">O</div>
+                <h3>Only Monday</h3>
+                <p>Rock</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <p class="section-label">ABOUT MOOD MUSIC</p>
+        <h2>เพลงคือส่วนหนึ่งของความรู้สึก</h2>
+
+        <p>
+            MOOD MUSIC เป็นเว็บไซต์ที่รวบรวมเพลงหลากหลายแนว
+            เพื่อให้ทุกคนสามารถค้นหาเพลงที่ตรงกับอารมณ์
+            และความชอบของตัวเองได้ง่ายขึ้น
+        </p>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#home" class="logo">
+            MOOD<span>MUSIC</span>
+        </a>
+
+        <p>© 2026 MOOD MUSIC. All Rights Reserved.</p>
+        <p>เว็บไซต์นี้จัดทำขึ้นเพื่อการศึกษา</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
